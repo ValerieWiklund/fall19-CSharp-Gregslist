@@ -1,3 +1,4 @@
+using System;
 using gregslist.Services;
 
 namespace gregslist.Controllers
@@ -8,6 +9,15 @@ namespace gregslist.Controllers
         public void UserInput()
         {
             System.Console.WriteLine("Type a number to see details or Q to quit");
+            string choice = Console.ReadLine().ToLower();
+
+            switch (choice)
+            {
+                case "q":
+                    Environment.Exit(1);
+                    break;
+
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using gregslist.Controllers;
 
 namespace gregslist
 {
@@ -7,6 +8,7 @@ namespace gregslist
         static void Main(string[] args)
         {
             Console.Clear();
+            CarController cc = new CarController();
         }
     }
 }
