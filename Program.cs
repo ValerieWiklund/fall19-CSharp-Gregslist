@@ -9,6 +9,10 @@ namespace gregslist
         {
             Console.Clear();
             CarController cc = new CarController();
+            while (true)
+            {
+                cc.UserInput();
+            }
         }
     }
 }
