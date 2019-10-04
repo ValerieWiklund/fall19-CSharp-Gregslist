@@ -8,8 +8,14 @@ namespace gregslist.Services
         public List<Car> Cars { get; private set; }
         public List<string> Messages { get; set; }
 
-        public void Print()
+        public void GetCars()
         {
+            Messages.Add("Available Cars");
+            for (int i = 0; i < Cars.Count; i++)
+            {
+                Car c = Cars[i];
+                Messages.Add($"{i + 1}: {c.Make} - {c.Model}");
+            }
 
         }
 
