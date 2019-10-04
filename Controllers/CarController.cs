@@ -11,11 +11,26 @@ namespace gregslist.Controllers
             _carService.GetCars();
             Print();
             string choice = Console.ReadLine().ToLower();
-
+            Console.Clear();
             switch (choice)
             {
                 case "q":
                     Environment.Exit(1);
+                    break;
+                default:
+                    if (int.TryParse(choice, out int index))
+                    {
+                        //print car details
+                        _carService.GetCars(index - 1);
+                        Print();
+                        Console.ReadKey();
+                        Console.Clear();
+                    }
+                    else
+                    {
+                        System.Console.WriteLine("Invalid Command!");
+                        Console.Beep();
+                    }
                     break;
 
             }
@@ -28,7 +43,7 @@ namespace gregslist.Controllers
                 System.Console.WriteLine(message);
             }
             _carService.Messages.Clear();
-            System.Console.WriteLine("Type a number to see details or Q to quit");
+            System.Console.WriteLine();
 
         }
     }

@@ -22,9 +22,15 @@ namespace gregslist.Services
         {
             if (index < Cars.Count && index > -1)
             {
-
+                Car c = Cars[index];
                 Messages.Add($@"
-                Make: {}
+Make: {c.Make}
+Model: {c.Model}
+Year: {c.Year}
+Price: {c.Price:c}
+Description: {c.Description}
+                
+press any key to return to the main menu!
                 ");
             }
             else
