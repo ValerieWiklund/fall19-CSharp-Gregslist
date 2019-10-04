@@ -8,7 +8,8 @@ namespace gregslist.Controllers
         private CarService _carService { get; set; } = new CarService();
         public void UserInput()
         {
-            System.Console.WriteLine("Type a number to see details or Q to quit");
+            _carService.GetCars();
+            Print();
             string choice = Console.ReadLine().ToLower();
 
             switch (choice)
@@ -18,6 +19,17 @@ namespace gregslist.Controllers
                     break;
 
             }
+        }
+
+        private void Print()
+        {
+            foreach (string message in _carService.Messages)
+            {
+                System.Console.WriteLine(message);
+            }
+            _carService.Messages.Clear();
+            System.Console.WriteLine("Type a number to see details or Q to quit");
+
         }
     }
 }
