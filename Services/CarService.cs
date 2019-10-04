@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using gregslist.Models;
 
@@ -17,6 +18,22 @@ namespace gregslist.Services
             Cars.AddRange(new Car[] { ford, honda, toyota, tracker });
         }
 
+        internal void GetCars(int index)
+        {
+            if (index < Cars.Count && index > -1)
+            {
+
+                Messages.Add($@"
+                Make: {}
+                ");
+            }
+            else
+            {
+                Messages.Add("Invalid Choice... Dummy!");
+
+            }
+        }
+
         public void GetCars()
         {
             Messages.Add("Available Cars");
@@ -25,10 +42,8 @@ namespace gregslist.Services
                 Car c = Cars[i];
                 Messages.Add($"{i + 1}: {c.Make} - {c.Model}");
             }
-
+            Messages.Add("Type a number to see details or Q to quit");
         }
-
-
 
         public CarService()
         {
