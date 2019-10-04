@@ -6,7 +6,12 @@ namespace gregslist.Services
     public class CarService
     {
         public List<Car> Cars { get; private set; }
+        public List<string> Messages { get; set; }
 
+        public void Print()
+        {
+
+        }
 
 
 
