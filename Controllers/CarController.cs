@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using gregslist.Services;
 
 namespace gregslist.Controllers
@@ -29,7 +30,31 @@ namespace gregslist.Controllers
                     else
                     {
                         System.Console.WriteLine("Invalid Command!");
-                        Console.Beep();
+                        // string f = "Failure";
+                        // bool color = true;
+                        // string message = "";
+                        // foreach (char c in f)
+                        // {
+                        //     if (color)
+                        //     {
+                        //         Console.BackgroundColor = ConsoleColor.Magenta;
+                        //         Console.ForegroundColor = ConsoleColor.Green;
+                        //     }
+                        //     else
+                        //     {
+                        //         Console.BackgroundColor = ConsoleColor.Green;
+                        //         Console.ForegroundColor = ConsoleColor.Magenta;
+                        //     }
+                        //     color = !color;
+                        //     Console.Clear();
+                        //     Thread.Sleep(50);
+                        //     message += c;
+                        //     Console.WriteLine(message);
+                        //     Console.Beep();
+                        // }
+                        // Thread.Sleep(1000);
+                        // Console.ResetColor();
+                        // Console.Clear();
                     }
                     break;
 
